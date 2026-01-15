@@ -25,7 +25,7 @@
         @if($video)
             <video loop autoplay preload="auto" muted class="absolute inset-0 w-full h-full object-cover" src="{{ $video['url'] }}"></video>
         @elseif($image)
-            <img class="w-full h-full object-cover" src="{{ $image['sizes']['medium_large'] }}" alt="">
+            <img loading="eager" class="w-full h-full object-cover" src="{{ $image['sizes']['medium_large'] }}" alt="">
         @else
             <p>Uploade et billede eller video</p>
         @endif

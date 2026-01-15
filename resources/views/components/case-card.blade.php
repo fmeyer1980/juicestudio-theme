@@ -10,7 +10,7 @@
     </div>
     <div class="relative aspect-video rounded-xl overflow-clip order-1 image-overlay" style="view-transition-name: case-image-{{ $item->ID }};">
         @if($image)
-            <img class="absolute inset-0 w-full h-full object-cover" src="{{ $image['sizes']['large'] }}">
+            <img class="absolute inset-0 w-full h-full object-cover" loading="lazy" src="{{ $image['sizes']['large'] }}">
         @endif
     </div>
    

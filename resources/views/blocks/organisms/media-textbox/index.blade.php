@@ -23,7 +23,7 @@
     />
     <div class="relative overflow-clip rounded-xl h-full aspect-4/3 md:aspect-auto bg-light-shade grid place-content-center {{ $flip_content == true ? 'order-1' : 'order-2' }}">
         @if($image)
-            <img class="absolute inset-0 w-full h-full object-cover" style="object-position: {{ $focal_point['x'] ?? '50' }}% {{ $focal_point['y'] ?? '50' }}%;" src="{{ $image['sizes']['large'] }}" alt="Alt tekst her">
+            <img loading="lazy" class="absolute inset-0 w-full h-full object-cover" style="object-position: {{ $focal_point['x'] ?? '50' }}% {{ $focal_point['y'] ?? '50' }}%;" src="{{ $image['sizes']['large'] }}" alt="Alt tekst her">
         @else
             <b class="opacity-30">Upload billede</b>
         @endif

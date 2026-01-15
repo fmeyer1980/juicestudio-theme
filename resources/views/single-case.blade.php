@@ -24,7 +24,7 @@
         </div>
         <div class="relative aspect-square rounded-xl overflow-clip image-overlay" style="view-transition-name: case-image-{{ get_the_ID() }};">
             @if($image)
-                <img class="absolute inset-0 w-full h-full object-cover" src="{{ $image['sizes']['large'] }}">
+                <img loading="eager" class="absolute inset-0 w-full h-full object-cover" src="{{ $image['sizes']['large'] }}">
             @endif
         </div>
     </section>
