@@ -137,13 +137,19 @@ add_filter('use_block_editor_for_post_type', function ($use_block_editor, $post_
     return $use_block_editor;
 }, 10, 2);
 
-add_filter(
-	'wp_speculation_rules_configuration',
-	function ( $config ) {
-		if ( is_array( $config ) ) {
-			$config['mode']      = 'prerender';
-			$config['eagerness'] = 'moderate';
-		}
-		return $config;
-	}
-);
+add_action('wp_footer', function() {
+    if (is_singular() || is_archive() || is_home()) {
+        ?>
+        <script type="speculationrules">
+        {
+            "prerender": [{
+                "where": {
+                    "href_matches": "/*"
+                },
+                "eagerness": "moderate"
+            }]
+        }
+        </script>
+        <?php
+    }
+}, 99);
