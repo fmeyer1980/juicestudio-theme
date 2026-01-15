@@ -1,0 +1,143 @@
+{
+  "__preprocessed__": "This file is used to build the theme.json file in the `public/build/assets` directory. The built artifact includes Tailwind's colors, fonts, and font sizes.",
+  "$schema": "https://schemas.wp.org/trunk/theme.json",
+  "version": 3,
+  "settings": {
+    "layout": {
+      "contentSize": "48rem"
+    },
+    "background": {
+      "backgroundImage": true
+    },
+    "color": {
+      "custom": false,
+      "customDuotone": false,
+      "customGradient": false,
+      "defaultDuotone": false,
+      "defaultGradients": false,
+      "defaultPalette": false,
+      "duotone": []
+    },
+    "custom": {
+      "spacing": {},
+      "typography": {
+        "font-size": {},
+        "line-height": {}
+      }
+    },
+    "spacing": {
+      "customSpacingSize": true,
+      "defaultSpacingSizes": false,
+      "spacingSizes": [
+        {
+          "name": "Small",
+          "size": "var(--size-600)",
+          "slug": "10"
+        },
+        {
+          "name": "Medium",
+          "size": "var(--size-800)",
+          "slug": "20"
+        },
+        {
+          "name": "Large",
+          "size": "var(--size-900)",
+          "slug": "30"
+        },
+        {
+          "name": "XL",
+          "size": "var(--size-lg)",
+          "slug": "40"
+        },
+        {
+          "name": "XXL",
+          "size": "var(--size-xl)",
+          "slug": "50"
+        }
+      ],
+      "padding": true,
+      "margin": true,
+      "blockGap": true,
+      "units": ["px", "%", "em", "rem", "vw", "vh"]
+    },
+    "typography": {
+      "fontSizes": [
+        {
+          "name": "small",
+          "size": "var(--size-100)",
+          "slug": "text-100"
+        },
+        {
+          "name": "medium",
+          "size": "var(--size-200)",
+          "slug": "text-200"
+        },
+        {
+          "name": "large",
+          "size": "var(--size-300)",
+          "slug": "text-300"
+        },
+        {
+          "name": "XL",
+          "size": "var(--size-350)",
+          "slug": "text-350"
+        },
+        {
+          "name": "XXL",
+          "size": "var(--size-400)",
+          "slug": "text-400"
+        }
+      ],
+      "defaultFontSizes": false,
+      "customFontSize": false,
+      "fontFamilies": [
+        {
+          "fontFamily": "Bueno, sans-serif",
+          "name": "Bueno",
+          "slug": "bueno"
+        },
+        {
+          "fontFamily": "FiraSans, sans-serif",
+          "name": "FiraSans",
+          "slug": "fira-sans"
+        }
+      ]
+    }
+  },
+  "styles": {
+    "typography": {
+      "fontFamily": "var(--wp--preset--font-family--fira-sans)"
+    },
+    "elements": {
+      "body": {
+        "typography": {
+          "fontFamily": "var(--wp--preset--font-family--fira-sans)",
+          "fontSize": "1rem",
+          "lineHeight": "1.5"
+        }
+      },
+      "link": {
+        "typography": {
+          "textDecoration": ""
+        }
+      }
+    },
+    "blocks": {
+      "acf/text": {
+        "color": {
+          "text": "currentColor"
+        }
+      },
+      "acf/intro": {
+        "color": {
+          "background": "var(--wp--preset--color--primary)",
+          "text": "var(--wp--preset--color--light-glare)"
+        },
+        "spacing": {
+          "top": "var(--size-800)",
+          "bottom": "var(--size-800)"
+        }
+      }
+    }
+  }
+}

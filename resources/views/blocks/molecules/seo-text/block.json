@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/seo-text",
+  "title": "Seo text",
+  "description": "En wrapper til at gruppere blocks med baggrund og spacing",
+  "category": "layout",
+  "icon": "cover-image",
+  "keywords": ["section", "wrapper", "container"],
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  },
+  "supports": {
+    "anchor": true,
+    "align": ["full"],
+    "jsx": true,
+    "spacing": {
+      "padding": ["top", "bottom"]
+    }
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

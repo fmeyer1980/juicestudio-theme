@@ -1,0 +1,27 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/test",
+  "title": "Test",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "script": "file:./script.js",
+  "acf": {
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "App\\render_acf_block"
+  },
+   "supports": {
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    },
+    "spacing": {
+      "padding": ["top", "bottom"]
+    },
+    "anchor": true,
+    "jsx": false
+  }
+}

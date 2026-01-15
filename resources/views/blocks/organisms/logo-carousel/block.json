@@ -1,0 +1,20 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/logo-carousel",
+  "title": "Logo carousel",
+  "description": "En intro-sektion med billede og tekst, bygget med ACF og Blade.",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "style": "file:./style.css",
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  },
+  "supports": {
+    "spacing": {
+      "padding": ["top", "bottom"]
+    }
+  }
+}

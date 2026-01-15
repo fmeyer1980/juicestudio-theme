@@ -1,0 +1,28 @@
+@import './app';
+
+/* .acf-block-component{
+    margin-block-start: 0 !important;
+} */
+
+.editor-visual-editor__post-title-wrapper {
+  display: none !important;
+}
+
+/* .acf-block-component.is-selected, .wp-block-acf-intro {
+    z-index: 99;
+} */
+
+/* .wp-block-acf-intro {
+    z-index: 99;
+}
+
+.wp-block-post-content-is-layout-flow{
+    & > * + *{
+        margin-block-start: var(--flow-space, var(--size-lg)) !important;
+    }
+} */
+
+
+.block-editor-block-list__block{
+    margin-block: 0;
+}

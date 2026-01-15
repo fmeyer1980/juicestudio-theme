@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/benefit-list",
+  "title": "Benefit list",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "parent": ["acf/benefit"],
+  "acf": {
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "App\\render_acf_block"
+  }
+}

@@ -1,0 +1,172 @@
+@source "../views/";
+@source "../../app/";
+@source "theme.json";
+
+@layer global-block-styles, theme, base, components, utilities;
+
+/* @import "tailwindcss/theme.css" layer(theme) theme(static);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities); */
+
+@import 'tailwindcss' theme(static);
+
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+@source inline("bg-primary-glare bg-primary bg-primary-shade");
+@source inline("bg-secondary-glare bg-secondary bg-secondary-shade");
+@source inline("bg-light-glare bg-light bg-light-shade");
+@source inline("bg-dark-glare bg-dark bg-dark-shade");
+
+@import './var' layer(base);
+@import './base' layer(base);
+@import './type' layer(base);
+@import './btn' layer(base);
+@import './page-content' layer(base);
+
+@theme {
+  --color-*: initial;
+  --color-primary-glare: #426BFF;
+  --color-primary: #1A4AF6;
+  --color-primary-shade: #022ECF;
+  --color-light-glare: #F8F9FC;
+  --color-light: #E9EEF6;
+  --color-light-shade: #DDE3EE;
+  --color-dark-glare: #22242C;
+  --color-dark: #17191F;
+  --color-dark-shade: #0A0B0F;
+  --color-black: #000000;
+
+
+  --text-*: initial;
+  --text-xxs: 0.8125rem;
+  --text-xs: 0.875rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-100: var(--size-100);
+  --text-200: var(--size-200);
+  --text-250: var(--size-250);
+  --text-300: var(--size-300);
+  --text-350: var(--size-350);
+  --text-400: var(--size-400);
+  --text-450: var(--size-450);
+  --text-500: var(--size-500);
+  --text-550: var(--size-550);
+  --text-600: var(--size-600);
+  --text-650: var(--size-650);
+  --text-700: var(--size-700);
+  --text-750: var(--size-750);
+  --text-800: var(--size-800);
+  --text-850: var(--size-850);
+  --text-900: var(--size-900);
+  --text-950: var(--size-950);
+
+  --spacing-xxs: 0.8125rem;
+  --spacing-xs: 0.875rem;
+  --spacing-sm: 0.9375rem;
+  --spacing-100: var(--size-100);
+  --spacing-200: var(--size-200);
+  --spacing-300: var(--size-300);
+  --spacing-400: var(--size-400);
+  --spacing-500: var(--size-500);
+  --spacing-550: var(--size-550);
+  --spacing-600: var(--size-600);
+  --spacing-650: var(--size-650);
+  --spacing-700: var(--size-700);
+  --spacing-750: var(--size-750);
+  --spacing-800: var(--size-800);
+  --spacing-850: var(--size-850);
+  --spacing-900: var(--size-900);
+  --spacing-950: var(--size-950);
+  --spacing-lg: var(--size-lg);
+  --spacing-xl: var(--size-xl);
+  --spacing-xxl: var(--size-xxl);
+  --spacing-huge: var(--size-huge);
+  --spacing-container: var(--container-padding);
+  --spacing-gutter: var(--gutter);
+  --0.3em: 0.3em;
+  --0.5em: 0.5em;
+  --0.8em: 0.8em;
+  --1em: 1em;
+  --1.5em: 1.5em;
+  --2em: 2em;
+  --2.5em: 2.5em;
+  --3em: 3em;
+
+  --radius-custom-left: var(--radius-4xl) var(--radius-lg) var(--radius-4xl)
+    var(--radius-lg);
+  --radius-custom-right: var(--radius-lg) var(--radius-4xl) var(--radius-lg)
+    var(--radius-4xl);
+
+  --shadow-custom: inset 0 0px 10px rgba(0, 0, 0, 0.25); 
+
+  --leading-flat: 1.1;
+  --leading-loos: 1.6;
+
+  --font-*: initial;
+  --font-base: 'FiraSans', 'Helvetica', 'Arial', 'Lucida', 'sans-serif';
+  --font-heading: 'Bueno', 'Helvetica', 'Arial', 'Lucida', 'sans-serif';
+  --font-symbols: 'Iconfont', sans-serif;
+}
+
+@utility wrapper {
+  padding-left: calc(((100% - var(--container-width)) / 2) - var(--gutter));
+  padding-right: calc(((100% - var(--container-width)) / 2) - var(--gutter));
+  border-left: var(--gutter) solid transparent;
+  border-right: var(--gutter) solid transparent;
+}
+
+@utility flow-y {
+  & > * + * {
+    margin-block-start: var(--flow-space, 1em);
+  }
+}
+
+@utility flow-x {
+  & > * + * {
+    margin-inline-start: var(--flow-space, 1em);
+  }
+}
+
+@utility full-bleed {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+}
+
+@utility image-overlay {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    mix-blend-mode: color;
+    background-color: var(--color-primary-shade);
+    opacity: 0.1;
+  }
+}
+
+/* @utility rounded-custom{
+    @apply rounded-tl-2xl rounded-tr-md rounded-br-2xl rounded-bl-md;  
+} */
+
+@utility auto-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-size, var(--spacing-900)), 1fr)
+  );
+}
+
+@utility border-l-gutter {
+  border-left: var(--gutter) solid transparent;
+}
+
+@utility border-r-gutter {
+  border-right: var(--gutter) solid transparent;
+}

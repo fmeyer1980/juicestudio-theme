@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/featured-services",
+  "title": "Featured services",
+  "description": "",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "style": "file:./style.css",
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  },
+  "supports": {
+    "spacing": {
+      "padding": ["top", "bottom"]
+    },
+    "anchor": true,
+    "mode": true,
+    "align": ["full"],
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

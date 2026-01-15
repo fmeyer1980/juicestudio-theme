@@ -1,0 +1,15 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/entry-card",
+  "title": "Entry card",
+  "description": "",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "parent": ["acf/entries"],
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  }
+}

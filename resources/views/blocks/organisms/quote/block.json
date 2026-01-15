@@ -1,0 +1,54 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/quote",
+  "title": "Quote",
+  "description": "En intro-sektion med billede og tekst, bygget med ACF og Blade.",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "script": "file:./script.js",
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  },
+  "supports": {
+    "color": {
+      "text": true,
+      "background": true,
+      "gradients": true
+    },
+    "spacing": {
+      "padding": ["top", "bottom"]
+    },
+    "anchor": true,
+    "mode": true,
+    "align": ["full"],
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "primary"
+    },
+    "textColor": {
+      "type": "string",
+      "default": "light-glare"
+    },
+    "style": {
+      "type": "object",
+      "default": {
+        "spacing": {
+          "padding": {
+            "top": "var(--wp--preset--spacing--50)",
+            "bottom": "var(--wp--preset--spacing--50)"
+          }
+        }
+      }
+    }
+  }
+}

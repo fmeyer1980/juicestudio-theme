@@ -1,0 +1,51 @@
+{
+    "$schema": "https://schemas.wp.org/trunk/block.json",
+    "apiVersion": 3,
+    "name": "acf/button",
+    "title": "Button",
+    "description": "",
+    "category": "layout",
+    "icon": "align-full-width",
+    "keywords": ["hero", "banner", "acf"],
+    "acf": {
+        "blockVersion": 3,
+        "mode": "preview",
+        "renderCallback": "App\\render_acf_block"
+    },
+    "supports": {
+        "anchor": true,
+        "mode": true,
+        "jsx": true,
+        "remove": true,
+        "lock": false,
+        "color": {
+            "text": true,
+            "background": true
+        }
+    },
+    "editorStyle": "file:./editor.css",
+    "styles": [
+        {
+            "name": "fill",
+            "label": "Fill",
+            "isDefault": true,
+            "styleHandle": "acf-button-fill"
+        },
+        {
+            "name": "outline",
+            "label": "Outline",
+            "styleHandle": "acf-button-outline"
+        }
+    ],
+    "example": {
+        "attributes": {
+            "className": "is-style-fill",
+            "data": {
+                "link": {
+                    "title": "Call to action",
+                    "url": "#"
+                }
+            }
+        }
+    }
+}

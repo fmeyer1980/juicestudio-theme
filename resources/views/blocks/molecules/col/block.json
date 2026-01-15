@@ -1,0 +1,24 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "name": "acf/col",
+  "title": "Col",
+  "description": "En wrapper til at gruppere blocks med baggrund og spacing",
+  "category": "layout",
+  "icon": "cover-image",
+  "keywords": ["section", "wrapper", "container"],
+  "acf": {
+    "blockVersion": 3,
+    "renderCallback": "App\\render_acf_block"
+  },
+  "supports": {
+    "anchor": true,
+    "align": ["full"],
+    "jsx": true
+  },
+  "attributes": {
+    "align": {
+      "type": "string",
+      "default": "full"
+    }
+  }
+}

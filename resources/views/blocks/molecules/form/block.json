@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/form",
+  "title": "Form",
+  "category": "layout",
+  "icon": "align-full-width",
+  "keywords": ["hero", "banner", "acf"],
+  "acf": {
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "App\\render_acf_block"
+  }
+}

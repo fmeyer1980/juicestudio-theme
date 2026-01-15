@@ -1,0 +1,14 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "acf/icon-textbox",
+  "title": "Icon textbox",
+  "category": "layout",
+  "icon": "star-filled",
+  "parent": ["acf/benefit-list"],
+  "acf": {
+    "blockVersion": 3,
+    "mode": "preview",
+    "renderCallback": "App\\render_acf_block"
+  }
+}

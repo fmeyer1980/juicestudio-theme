@@ -1,0 +1,97 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Bueno';
+  font-style: normal;
+  font-weight: 700;
+  src: url('@fonts/Bueno-Bold.woff2') format('woff2');
+}
+
+
+@font-face {
+  font-display: swap;
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('@fonts/FiraSans-Light.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('@fonts/FiraSans-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'FiraSans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('@fonts/FiraSans-SemiBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: "Iconfont";
+  font-style: normal;
+  font-weight: 600;
+  src: url("@fonts/Iconfont.woff") format("woff");
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  text-wrap: balance;
+  line-height: var(--leading-tight);
+  font-weight: var(--font-weight-normal);
+  font-family: var(--font-heading);
+  line-height: var(--leading-tight);
+  text-transform: uppercase;
+}
+
+:where(h1,.h1):not([class]) {
+    font-size: var(--size-800);
+}
+
+:where(h2,.h2):not([class]) {
+    font-size: var(--size-700);
+}
+
+:where(h3,.h3):not([class]) {
+    font-size: var(--size-600);
+}
+
+h1,
+.h1,
+h2,
+.h2 {
+  line-height: var(--leading-flat);
+}
+
+p {
+  text-wrap: pretty;
+}
+
+.text-large {
+  font-size: 1.2em;
+}
+
+.title {
+  text-transform: uppercase;
+  color: var(--color-primary);
+  letter-spacing: var(--tracking-wider);
+}
+
+.title + h1, .title + h2{
+ --flow-space: .2em;
+}

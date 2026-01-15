@@ -1,0 +1,1 @@
+<a class="{{ $class }}" href="/" aria-label="Gå til {{ $site_name }} forside">@svg('logo', 'w-auto', ['width' => 'auto', 'height' => 'auto'])</a>
